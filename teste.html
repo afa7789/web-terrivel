@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Get</title>
+	<style type="text/css">
+		form {
+		    display: table;
+		    border: 1px solid black;
+			margin: 50px;
+			padding: 20px;
+
+		}
+		.form-group{
+	      font-size: 10px;
+		  text-align: right;
+		  background-color:white;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="form-group">Formulários</h1>
+	<form action="http://terrivel.herokuapp.com/monster">
+		<input name="nome" placeholder="nome do bicho">
+		 <br> 
+		<input name="num_pedras" type="number" min="0" step="1" placeholder="numero de pedras" required />
+		 <br> 
+		<input name="tam_pedras" type="number" min="1" max="7" step="0.5"  placeholder="Tamanho Pedras"/>
+		 <br> 
+		<input type="color" name="corCeu1" />
+		 <br> 
+		<input type="color" name="corCeu2" />
+		 <br> 
+		<span title="Segure Control para selecionar mais de um Tipo"><br>Tipo de Pedras:</br></span>
+
+		<select multiple name="tipo_pedras"  >
+	  			<option value="marroada">Marroada</option>
+	  			<option value="ametista">Ametista</option>
+	  			<option value="topazio">Topazio</option>
+	  			<option value="espinela">Espinela</option>
+		</select>
+		<br> Pedras Sortidas ?:
+		<br>
+		<label><input name="tipo_pedras_sortidas" type="radio" value="não">Não</label>
+		<label><input name="tipo_pedras_sortidas" type="radio" value="sim">Sim</label>
+		<br>
+		<button type="submit"> Send</button>
+	</form>
+</body>
+</html>
